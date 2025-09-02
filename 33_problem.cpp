@@ -1,8 +1,8 @@
 #include <iostream>
-#include<algorithm>
 using namespace std;
 
-vector<int> sumOddAndEven(vector<int> v){
+vector<int> sumOddAndEven(const vector<int> &v){
+  
   int even = 0;
   int odd = 0;
 
@@ -11,10 +11,10 @@ vector<int> sumOddAndEven(vector<int> v){
     else even += el;
   }
 
-  return vector<int>{even, odd};
+  return {even, odd};
 }
 
-void print(vector<int> ve){
+void print(const vector<int> &ve){
   cout << "[ " << ve[0] << ", " << ve[1]   << " ]"  << endl ;
 }
 
@@ -25,5 +25,5 @@ int main() {
     print(sumOddAndEven(vector<int> {0, 0}));
     print(sumOddAndEven(vector<int> {}));
 
-  return 0;
+    return 0;
 }
