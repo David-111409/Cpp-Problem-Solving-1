@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
 
+// file #1
 
 int main() {
 int x = 12;
@@ -21,7 +22,8 @@ cout << "x = " << x << endl;
 cout << "y = " << y << endl;
 }
 
-// another file
+// file #2
+
 // #include<iostream>
 // using namespace std;
 
@@ -41,5 +43,30 @@ cout << "y = " << y << endl;
 //     cout <<"a = " << a ;
 //     cout << ", b = " << b << endl;
     
+//     return 0;
+// }
+
+// file #3
+
+// #include<iostream>
+// using namespace std;
+// void checkType(){
+//     cout << "Enter any char:\n" ;
+//     char c;
+//     cin >> c;
+//     cout << "you entered : " << c;
+//     if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') ){
+//         cout << " which is an alphabet" ;
+//     }
+//     else if (c >= '0' && c <= '9'){
+//         cout << " which is a digit";
+//     }
+//     else {
+//         cout << " which is a special";
+//     }
+// }
+
+// int main() {
+//     checkType();
 //     return 0;
 // }
