@@ -57,3 +57,47 @@ int main() {
     }
     return 0;
 }
+
+/*
+#include <iostream>
+using namespace std;
+int main() {
+    // int s, e;
+    // cin >> s >> e;
+    
+    // while (s <= e){
+    //     cout << s << endl;
+    //     s++;
+    // }
+    
+    // int n;
+    // char ch;
+    // cin >> n >> ch;
+    // while(n){
+    //     cout << ch ;
+    //     --n;
+    // }
+    
+    int rows;
+    cin >> rows;
+    
+    int st = 1;
+    
+    while(rows--){
+       
+        // for (int i = 0; i < st; i++){
+        //     cout << "*";
+        // }
+        int i = 0;
+        while(i < st){
+            cout << "*";
+            i++;
+        }
+        cout << endl;
+        st++;
+        
+    }
+    // cout << rows;
+    return 0;
+}
+*/
