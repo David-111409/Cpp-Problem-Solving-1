@@ -17,3 +17,32 @@ int main() {
 
     return 0;
 }
+
+/*
+#include <iostream>
+using namespace std;
+int main()
+{
+   int count = 0;
+   
+   for (int i = 50 ; i <= 300; i++){
+       int j = 70;
+       
+       if (i >= 70){
+           j = i + 1;
+       }
+           
+       for (; j <= 400; j++){
+               int sum = i + j;
+               if ( sum % 7 == 0 )
+                     count++;
+       
+       }
+   }
+   
+    cout << count;
+    
+
+    return 0;
+}
+*/
