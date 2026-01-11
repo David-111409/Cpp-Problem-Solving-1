@@ -36,3 +36,53 @@
           
     	 return 0;
     }
+
+/*
+    #include<iostream>
+    using namespace std;
+     
+    
+     
+        int main() {
+    
+        
+        // prime check
+        // int n;
+        // cin >> n;
+        // int res = 1;
+        // if (n <= 1) res = 0;
+        // else if (n == 2 || n == 3) res = 1;
+        // else if (n % 2 == 0 || n % 3 == 0) res = 0;
+        
+        // else {
+        //     for (int i = 5; i * i <= n; i = i + 6){
+        //         if(n % i == 0 || (n % (i + 2) == 0)){
+        //         res = 0; 
+        //         break;}
+        //     }
+        // }
+        
+        // if (res) cout << "YES";
+        // else cout << "NO";
+        
+        // quad
+        int count = 0;
+        for (int a = 1; a <= 200; a++){
+            for (int b = 1;  b <= 200; b++){
+                for (int c = 1; c <= 200; c++){
+                    int d = a + b - c;
+                    if(d >= 1 && d <= 200) ++count;
+                    // for (int d = 1; d <= 200; d++){
+                    //     if (a + b == c + d) {
+                    //         ++count;
+                    //         // cout << a << " " << b << " " << c << " " << d << endl;
+                    //         // break;
+                    //     }
+                    // }
+                }
+            }
+        }
+        cout << count;
+    	return 0;
+    }
+*/
