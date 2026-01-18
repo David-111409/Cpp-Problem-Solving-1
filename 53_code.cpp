@@ -75,75 +75,112 @@ using namespace std;
 //     return i;
 // }
 
-void read(double &a, double &b){
-    cin >> a >> b;
-}
+// void read(double &a, double &b){
+//     cin >> a >> b;
+// }
 
-double add(double a, double b){
-    return a + b;
-}
+// double add(double a, double b){
+//     return a + b;
+// }
 
-double mult(double a, double b){
-    return a * b;
-}
+// double mult(double a, double b){
+//     return a * b;
+// }
 
-double divide(double a, double b){
-    return a / b;
-}
+// double divide(double a, double b){
+//     return a / b;
+// }
 
-double sub(double a, double b){
-    return a - b;
-}
+// double sub(double a, double b){
+//     return a - b;
+// }
 
-void display(double a, double b,int  &count){
+// void display(double a, double b,int  &count){
     
-       while (true){
-        cout << "Enter a number from 1 to 5:\n";
-        int c;
-        cin >> c;
+//       while (true){
+//         cout << "Enter a number from 1 to 5:\n";
+//         int c;
+//         cin >> c;
         
-        if (c == 1 || c == 2 || c == 3 && b != 0 || c == 4) count++;
+//         if (c == 1 || c == 2 || c == 3 && b != 0 || c == 4) count++;
         
-        if (c == 1){
-            cout << "sum: " << add(a, b) << endl;
-        }
+//         if (c == 1){
+//             cout << "sum: " << add(a, b) << endl;
+//         }
         
-        else if (c == 2){
-            cout << "sub: " << sub(a, b) << endl;
-        }
+//         else if (c == 2){
+//             cout << "sub: " << sub(a, b) << endl;
+//         }
         
-        else if (c == 3) {
-            if (b != 0){
-                cout << "divide: " << a / b << endl;
-            }
-            else cout << "We can not divide by zero\n";
-        }
+//         else if (c == 3) {
+//             if (b != 0){
+//                 cout << "divide: " << a / b << endl;
+//             }
+//             else cout << "We can not divide by zero\n";
+//         }
         
-        else if (c == 4) cout << "mult: " << a * b << endl;
+//         else if (c == 4) cout << "mult: " << a * b << endl;
         
         
-        else if (c == 5) {cout << "We have done " << count << " operations" << endl;
-            break;
-        }
+//         else if (c == 5) {cout << "We have done " << count << " operations" << endl;
+//             break;
+//         }
         
-        else {
-            cout << "Give me a right number\n";
-        }
-       }
+//         else {
+//             cout << "Give me a right number\n";
+//         }
+//       }
     
     
-}
+// }
 
-void calc(){
-    int count = 0;
-    double a, b;
-    cout << "Give me two numbers:\n";
-    read(a, b);
-    display(a, b, count);
+// void calc(){
+//     int count = 0;
+//     double a, b;
+//     cout << "Give me two numbers:\n";
+//     read(a, b);
+//     display(a, b, count);
    
+// }
+
+bool  starts_with(string input, string pattern, int pos){
+    int l = pattern.size();
+    for (int i = 0; i < l; i++){
+        if (pattern[i] != input[pos++]) return false;
+        // cout << pattern[i] << " : " << input[pos++] << endl;
+    }
+    return true;
+}
+
+string replace_str(string input, string pattern, string str_to ){
+    int l = input.size();
+    int c = 0;
+    int i = 0;
+    int k = max(pattern.size()-1, str_to.size() - 1) ;
+    int n = min(pattern.size()-1, str_to.size() - 1) ;
+
+    string new_string = "";
+    for ( ; i < l; i++){
+        if (starts_with(input, pattern, i)){
+            for (int i = 0; i <= k; i++){
+                new_string += str_to[i];
+            }
+            i = i +  n ;
+        }
+        else {
+            new_string += input[i];
+        }
+    }
+    return new_string;
 }
 int main()
-{   // max number of 6 numbers
+{
+
+// {   cout << replace_str("khaled ahmed", "ed", "o") << endl;
+     cout << replace_str("aabbaaccaaa", "aa", "1234");
+    // cout << starts_with("dawoud", "d", 5);
+    
+    // max number of 6 numbers
 
     // int a, b, c, d, e, f;
     // cin >> a >> b >> c >> d >> e >> f;
@@ -184,9 +221,7 @@ int main()
     // cout << nth_prime(8) << endl;
     
 
-     calc();
-    // cout << add(a, b);
-    
-    // cout << a << " " << b;
+    //  calc();
+
     return 0;
 }
