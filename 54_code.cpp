@@ -24,6 +24,24 @@ using namespace std;
 //     return ar[i] / len  + average(ar, len ,   i + 1);
 // }
 
+// void increment_array(int arr[], int len, int i = 0){
+//     if (i == len) return;
+    
+//     cout << arr[i] + i << " ";
+//     increment_array(arr, len, i + 1);
+    
+// }
+// void acc_arr(int ar[], int len, int i = 0, int sum = 0){
+//     if (i == len) return;
+//     acc_arr(ar, len, i + 1, sum += ar[i]);
+//     ar[i] = sum;
+// }
+
+void left_max(int ar[], int len, int i = 0, int max = 0){
+    if (i == len) return;
+    left_max(ar, len, i + 1, (max = ar[i] > max ? ar[i] : max));
+    ar[i] = max;
+}
 
 int main()
 {
