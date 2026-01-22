@@ -68,3 +68,17 @@ void right_max(int ar[], int len, int s = INT_MIN){
     right_max(ar, len - 1, s);
 }
 */
+
+
+/*
+bool is_prefix(const string &main, const string &pref, int s = 0, int i = 0){
+    
+    
+    if (pref.size() > main.size() || (pref.size() == 0 && s >= main.size() )) return false;
+    if (i == pref.size()) return true;
+    if (main[s] != pref[i]) return false;
+    
+    return is_prefix(main, pref, s + 1, i + 1);
+}
+
+*/
