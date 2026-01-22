@@ -54,3 +54,17 @@ int main()
     // cout << average(ar,  s);
     return 0;
 }
+
+/*
+void right_max(int ar[], int len, int s = INT_MIN){
+   
+    if (len == 0) return;
+    
+    s = ar[len - 1] > s ? ar[len - 1] : s;
+   
+    
+    ar[len - 1] = s;
+    
+    right_max(ar, len - 1, s);
+}
+*/
