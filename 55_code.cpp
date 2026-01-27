@@ -93,3 +93,26 @@ int main()
     return 0;
 }
 */
+
+/*
+
+#include <iostream>
+#include <climits>
+using namespace std;
+int main()
+{   
+    int ar[771] = {};
+    int m = 0;
+    int n ;
+    cin >> n;
+    int c ;
+    for (int i = 0; i < n; i++){
+        cin >> c;
+        ar[c+500]++;
+        if (ar[c+500] > ar[m+500]) m = c;
+    }
+    
+    cout << m << " repteated " << ar[m+500] << " times";
+    return 0;
+}
+*/
