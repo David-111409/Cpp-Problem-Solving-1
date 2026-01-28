@@ -26,3 +26,26 @@ int main()
   
     return 0;
 }
+
+/*
+#include <iostream>
+#include <climits>
+using namespace std;
+int main()
+{   
+    int n ;
+    cin >> n;
+    
+    int ar[501] = {};
+    
+    for (int i = 0; i < n; i++){
+        int cur;
+        cin >> cur;
+        if (!ar[cur]) cout << cur << " ";
+        ar[cur]++;
+    }
+    
+    // cout << ar[10];
+    return 0;
+}
+*/
